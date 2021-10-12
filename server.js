@@ -4,6 +4,7 @@ const fs = require('fs');
 
 
 const notes = require('./db/db.json');
+const noteId = require('./helpers/noteid.js');
 
 
 const PORT = process.env.PORT || 3001;
@@ -28,9 +29,9 @@ app.get('/notes', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/notes.html'))
 );
 
-app.get('/api/notes', (req, res) => 
-    res.status(200).json(notes)
-);
+// app.get('/api/notes', (req, res) => 
+//     res.status(200).json(notes)
+// );
 
 
 app.post('/api/notes', (req, res) => {
@@ -42,6 +43,7 @@ app.post('/api/notes', (req, res) => {
     const newNote = {
       title,
       text,
+      id: noteId(),
     };
 
     fs.readFile('./db/db.json', 'utf8', (err, data) => {
@@ -76,6 +78,10 @@ app.get('/api/notes', (req, res) =>
     res.status(200).json(notes)
 );
 
+
+app.get('/api/notes/:id', (req, res) => 
+    res.status(200).json(notes)
+);
 
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT} 🚀`)
