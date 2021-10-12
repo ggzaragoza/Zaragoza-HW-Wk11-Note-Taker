@@ -6,5 +6,13 @@
  {
   "title": "Test note",
   "text": "It's great!"
+ },
+ {
+  "title": "Test Note 2",
+  "text": "asdf"
+ },
+ {
+  "title": "Test note 3",
+  "text": "asdfg"
  }
 ]
