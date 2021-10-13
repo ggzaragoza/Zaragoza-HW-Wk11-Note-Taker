@@ -57,10 +57,6 @@ app.post('/api/notes', (req, res) => {
         
         fs.writeFile('./db/db.json', JSON.stringify(parsedNotes, null, 1), (err) =>
           err ? console.error(err) : console.info('Your new note was successfully saved!'))
-
-            app.get('/api/notes', (req, res) => 
-    res.status(200).json(notes)
-);
       };
     });
 
@@ -75,18 +71,17 @@ app.post('/api/notes', (req, res) => {
   } else {
     res.status(500).json('Error in posting note.');
   }
-
-  
-
 })
 
 
 app.get('/api/notes', (req, res) => 
     fs.readFile('./db/db.json', 'utf8', (err, data) => {
-      res.json(JSON.parse(data))
-    }
-    )
-    // res.status(200).json(notes)
+      if (err) {
+        console.error(err)
+      } else {
+        res.json(JSON.parse(data))
+      }
+    })
 );
 
 app.get('/api/notes/:id', (req, res) => 
