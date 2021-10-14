@@ -12,7 +12,7 @@ In this repository you will find files for a simple "note taker" that receives u
 - [License](#license)
 - [Contact](#contact)
 ## Installation
-The application may be forked from this repository. Once inside the folder on your local computer, run an NPM install and then install the 'express' package for this application to run. Additionally this application is available to use at the deployed Heroku site below.
+The application may be forked from this repository. Once inside the folder on your local computer, run an NPM install and then install the 'express' package for this application to run. Additionally this application is available to use at the deployed Heroku site here: [https://frozen-ravine-09757.herokuapp.com/](https://frozen-ravine-09757.herokuapp.com/).
 ## Usage
 Once on the "notes" page, users simply enter a title for their note and add content, hitting the "save" icon at the top of the page to record the note. Users are able to view previously saved notes, and delete any no longer needed.
 ## Testing
