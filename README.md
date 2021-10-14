@@ -1,5 +1,5 @@
 
-# Note Taker
+# Zaragoza-HW-Wk11-Note-Taker
 ## Description
 In this repository you will find files for a simple "note taker" that receives user input and logs and saves responses to a JSON file via Express.js. Users have the options to write and store notes, along with the ability to delete notes off the saved notes list. The application essentially serves as a "to-do" application, making it easy for users to keep track of tasks, thoughts, or whatever they may need to log.
 
